@@ -10,7 +10,7 @@ export default class extends Component {
     const gitment = new Gitment({
       id: this.props.data.markdownRemark.frontmatter.title, // optional
       owner: 'buzhicongqianman',
-      repo: 'blog-comments',
+      repo: 'blog',
       oauth: {
         client_id: '65c93f8402e25333da6f',
         client_secret: '77bc0740abee5929d50cb04c45d91caf199edb88',
