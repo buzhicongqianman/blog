@@ -13,12 +13,12 @@ const mainStyle = css`
   text-align: justify;
 `
 
-const footerStyle = css`
-  background: #eee;
-  text-align: center;
-  padding: 2em;
-  margin-top: 2em;
-`
+// const footerStyle = css`
+//   background: #eee;
+//   text-align: center;
+//   padding: 2em;
+//   margin-top: 2em;
+// `
 
 const Layout = ({ children }) => (
   <StaticQuery

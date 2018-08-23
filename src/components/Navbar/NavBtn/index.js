@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { css } from 'react-emotion'
+// import style from './NavBtn.scss'
 
 const Line = styled('div')`
-  position: relative;
   width: 1em;
   height: 2px;
   background: #fff;
@@ -21,24 +21,26 @@ const btnBaseStyle = css`
 `
 
 const btnOpenStyle = css`
+  ${btnBaseStyle};
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  & :not(:first-child) {
+  & div:not(:first-child) {
     margin-top: 3px;
   }
 `
 
 const btnCloseStyle = css`
-  & :first-child {
+  ${btnBaseStyle};
+  & div:first-child {
     position: absolute;
     top: 22px;
     left: 15px;
     transform: rotate(45deg);
   }
-  & :last-child {
+  & div:last-child {
     position: absolute;
     top: 22px;
     left: 15px;
@@ -48,14 +50,14 @@ const btnCloseStyle = css`
 
 const NavBtn = ({isActive, clicked}) => {
   const openBtn = (
-    <div className={`${btnBaseStyle} ${btnOpenStyle}`} onClick={clicked}>
+    <div className={btnOpenStyle} onClick={clicked}>
       <Line />
       <Line />
       <Line />
     </div>
   )
   const closeBtn = (
-    <div className={`${btnBaseStyle} ${btnCloseStyle}`} onClick={clicked}>
+    <div className={btnCloseStyle} onClick={clicked}>
       <Line />
       <Line />
     </div>

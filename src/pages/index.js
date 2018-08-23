@@ -1,44 +1,61 @@
 import React from 'react'
 import {css} from 'react-emotion'
-import Layout from '../components/Layout'
+// import Layout from '../components/Layout'
 import { Link } from '@reach/router'
 import deer from '../images/deer.svg'
-import bu from '../images/bu.png'
-import zhi from '../images/zhi.png'
-import cong from '../images/cong.png'
-import qian from '../images/qian.png'
-import man from '../images/man.png'
+import logoFont from '../images/logo-font.svg'
 
-const homepageStyle = css`
-  position: absolute;
+const blurStyle = css`
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
-const fontImgStyle = css`
-  width: 2em;
+const homepageStyle = css`
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: sapce-between;
+  align-items: center;
+`
+
+const logoFontStyle = css`
+  flex: 1 1 20%;
+  filter: blur(5px);
 `
 
 const deerImgStyle = css`
-  height: 100vh;
+  flex: 1 1 80%;
+  filter: blur(5px);
+`
+
+const linkStyle = css`
+  display: inline-block;
+  text-decoration: none;
+  color: #f0f0f0;
+  background: #f16161;
+  font-size: 1.4rem;
+  padding: .5em 1.5em;
+  // border-radius: .5em;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
 `
 
 export default () => (
-  <Layout>
+  <>
     <div className={homepageStyle}>
-      <img src={bu} alt="不" className={fontImgStyle} />
-      <img src={zhi} alt="知" className={fontImgStyle} />
-      <img src={cong} alt="从" className={fontImgStyle} />
-      <img src={qian} alt="前" className={fontImgStyle} />
-      <img src={man} alt="慢" className={fontImgStyle} />
       <img src={deer} alt="Deer" className={deerImgStyle} />
-      <Link to="/posts/">查看文章</Link>
+      <img src={logoFont} alt="不知从前慢" className={logoFontStyle} />
     </div>
-  </Layout>
+    <div className={blurStyle}>
+      <Link to="/posts/" className={linkStyle}>查看文章</Link>
+    </div>
+  </>
 )

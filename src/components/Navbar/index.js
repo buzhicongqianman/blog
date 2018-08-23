@@ -12,7 +12,6 @@ const navbarStyle = css`
   margin: 0 auto;
   margin-bottom: 2em;
   padding: .7em;
-  z-index: 200;
 `
 
 class Navbar extends Component {

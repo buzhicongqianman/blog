@@ -12,15 +12,6 @@ const linkStyle = css({
   }
 })
 
-const tagStyle = css`
-  display: inline-block;
-  padding: .5em;
-  margin: .25em;
-  background: #eee;
-  border-radius: .5em;
-  cursor: pointer;
-`
-
 const tagsBoxStyle = css`
   width: 100%;
   margin-left: -0.25em;
@@ -97,13 +88,6 @@ export default class extends Component{
       >
         {tagName}
       </Badge>
-      // <span 
-        // key={tagName} 
-        // onClick={() => this.onTagClicked(this.state.tags[tagName])} 
-        // className={tagStyle}
-      // >
-      //   {tagName}
-      // </span>
     ))
 
     let relativePostsLink = '选择一个标签'
@@ -151,7 +135,6 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt
         }
       }
     }
