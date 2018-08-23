@@ -28,12 +28,12 @@ const homepageStyle = css`
 
 const logoFontStyle = css`
   flex: 1 1 20%;
-  filter: blur(5px);
+  filter: blur(3px);
 `
 
 const deerImgStyle = css`
   flex: 1 1 80%;
-  filter: blur(5px);
+  filter: blur(3px);
 `
 
 const linkStyle = css`
