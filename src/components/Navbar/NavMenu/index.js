@@ -74,8 +74,8 @@ const NavMenu = ({isActive}) => {
         <h3>浏览</h3>
         <Items>
           <Item><Link className={NavLinkStyle} activeClassName={activeLinkStyle} to="/">首页</Link></Item>
-          <Item><Link className={NavLinkStyle} activeClassName={activeLinkStyle} to="/posts/">归档</Link></Item>
-          <Item><Link className={NavLinkStyle} activeClassName={activeLinkStyle} to="/categories/">分类</Link></Item>
+          <Item><Link className={NavLinkStyle} activeClassName={activeLinkStyle} to="/posts">归档</Link></Item>
+          <Item><Link className={NavLinkStyle} activeClassName={activeLinkStyle} to="/categories">分类</Link></Item>
         </Items>
       </NavigationBox>
       <ContactBox>

@@ -1,7 +1,6 @@
 import React from 'react'
 import {css} from 'react-emotion'
-// import Layout from '../components/Layout'
-import { Link } from '@reach/router'
+import { Link } from 'gatsby'
 import deer from '../images/deer.svg'
 import logoFont from '../images/logo-font.svg'
 
@@ -55,7 +54,7 @@ export default () => (
       <img src={logoFont} alt="不知从前慢" className={logoFontStyle} />
     </div>
     <div className={blurStyle}>
-      <Link to="/posts/" className={linkStyle}>查看文章</Link>
+      <Link to="/posts" className={linkStyle}>查看文章</Link>
     </div>
   </>
 )
